@@ -5,19 +5,21 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { useSelector,useDispatch } from 'react-redux'
 import { decrement,increment } from './counter/counterSlice'
+import TaskList from './tasks/TaskList.jsx'
 
 function App() {
-  const count=useSelector((state) => state.counter.value);
-  const dispatch = useDispatch()
+  // const count=useSelector((state) => state.counter.value);
+  // const dispatch = useDispatch()
 
 
   return (
     <>
-      <div>
+      {/* <div>
         <p>the count of number is {count}</p>
         <button onClick={()=>{dispatch(increment())}}>Incre</button>
         <button onClick={()=>dispatch(decrement())}>Decre</button>
-      </div>
+      </div> */}
+      <TaskList/>
     </>
   )
 }
